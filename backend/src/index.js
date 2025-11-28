@@ -5,9 +5,10 @@ dotenv.config({
 import connectToDb from './db/db.js'
 import { app } from './app.js'
 
+const PORT = process.env.PORT || 5000;
 // console.log(process.env.PORT)
 connectToDb().then(() => {
-    app.listen(process.env.PORT, () => {
+    app.listen(PORT, () => {
         console.log(`Server is running on port ${process.env.PORT}`)
     })
 }).catch((err) => {
