@@ -4,10 +4,10 @@ const API_CONFIG = {
     LOCAL: 'http://localhost:1111/api/v1',
     
     // Production/Hosted (replace with your hosted URL when ready)
-    PRODUCTION: 'https://your-hosted-api.com/api/v1',
+    PRODUCTION: 'https://event-management-ntm3.onrender.com/api/v1',
     
     // Current environment
-    CURRENT: 'LOCAL' // Change to 'PRODUCTION' when deploying
+    CURRENT: 'PRODUCTION' // Change to 'PRODUCTION' when deploying
 };
 
 export const API_BASE_URL = API_CONFIG[API_CONFIG.CURRENT];
