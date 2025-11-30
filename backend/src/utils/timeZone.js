@@ -2,131 +2,103 @@
 //TODO: Keep this in config folder/file
 export const TIMEZONES = [
     {
-        abbreviation: "ET",
-        name: "Eastern Time",
+        name: "Eastern Time (ET)",
         iana: "America/New_York"
     },
     {
-        abbreviation: "CT",
-        name: "Central Time",
+        name: "Central Time (CT)",
         iana: "America/Chicago"
     },
     {
-        abbreviation: "MT",
-        name: "Mountain Time",
+        name: "Mountain Time (MT)",
         iana: "America/Denver"
     },
     {
-        abbreviation: "PT",
-        name: "Pacific Time",
+        name: "Pacific Time (PT)",
         iana: "America/Los_Angeles"
     },
     {
-        abbreviation: "AKT",
-        name: "Alaska Time",
+        name: "Alaska Time (AKT)",
         iana: "America/Anchorage"
     },
     {
-        abbreviation: "HT",
-        name: "Hawaii Time",
+        name: "Hawaii Time (HT)",
         iana: "Pacific/Honolulu"
     },
     {
-        abbreviation: "GMT",
-        name: "Greenwich Mean Time",
+        name: "Greenwich Mean Time (GMT)",
         iana: "Europe/London"
     },
     {
-        abbreviation: "CET",
-        name: "Central European Time",
+        name: "Central European Time (CET)",
         iana: "Europe/Paris"
     },
     {
-        abbreviation: "EET",
-        name: "Eastern European Time",
+        name: "Eastern European Time (EET)",
         iana: "Europe/Athens"
     },
-
     {
-        abbreviation: "IST",
-        name: "India Standard Time",
+        name: "India Standard Time (IST)",
         iana: "Asia/Kolkata"
     },
     {
-        abbreviation: "CST",
-        name: "China Standard Time",
+        name: "China Standard Time (CST)",
         iana: "Asia/Shanghai"
     },
     {
-        abbreviation: "JST",
-        name: "Japan Standard Time",
+        name: "Japan Standard Time (JST)",
         iana: "Asia/Tokyo"
     },
     {
-        abbreviation: "KST",
-        name: "Korea Standard Time",
+        name: "Korea Standard Time (KST)",
         iana: "Asia/Seoul"
     },
     {
-        abbreviation: "SGT",
-        name: "Singapore Time",
+        name: "Singapore Time (SGT)",
         iana: "Asia/Singapore"
     },
-
     {
-        abbreviation: "AEST",
-        name: "Australian Eastern Time",
+        name: "Australian Eastern Time (AEST)",
         iana: "Australia/Sydney"
     },
     {
-        abbreviation: "ACST",
-        name: "Australian Central Time",
+        name: "Australian Central Time (ACST)",
         iana: "Australia/Adelaide"
     },
     {
-        abbreviation: "AWST",
-        name: "Australian Western Time",
+        name: "Australian Western Time (AWST)",
         iana: "Australia/Perth"
     },
-
     {
-        abbreviation: "UTC",
-        name: "Coordinated Universal Time",
+        name: "Coordinated Universal Time (UTC)",
         iana: "UTC"
     },
     {
-        abbreviation: "BRT",
-        name: "Brazil Time",
+        name: "Brazil Time (BRT)",
         iana: "America/Sao_Paulo"
     },
     {
-        abbreviation: "ART",
-        name: "Argentina Time",
+        name: "Argentina Time (ART)",
         iana: "America/Argentina/Buenos_Aires"
     },
     {
-        abbreviation: "NZST",
-        name: "New Zealand Time",
+        name: "New Zealand Time (NZST)",
         iana: "Pacific/Auckland"
     },
     {
-        abbreviation: "MSK",
-        name: "Moscow Time",
+        name: "Moscow Time (MSK)",
         iana: "Europe/Moscow"
     },
     {
-        abbreviation: "GST",
-        name: "Gulf Standard Time",
+        name: "Gulf Standard Time (GST)",
         iana: "Asia/Dubai"
     },
     {
-        abbreviation: "PKT",
-        name: "Pakistan Time",
+        name: "Pakistan Time (PKT)",
         iana: "Asia/Karachi"
     },
     {
-        abbreviation: "WIB",
-        name: "Western Indonesia Time",
+        name: "Western Indonesia Time (WIB)",
         iana: "Asia/Jakarta"
     }
 ];
@@ -135,13 +107,12 @@ export const TIMEZONES = [
 
 export const TIMEZONE_MAP = new Map(
     TIMEZONES.map(tz => [
-        `${tz.name} (${tz.abbreviation})`,
+        tz.name,
         tz.iana
     ])
-
 );
 
-export const getTimezoneInfo = (abbreviation) => {
-    return TIMEZONE_MAP.get(abbreviation) || null;
+export const getTimezoneInfo = (timezoneName) => {
+    return TIMEZONE_MAP.get(timezoneName) || null;
 };
 
